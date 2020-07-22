@@ -32,12 +32,8 @@ module.exports = {
                 }
                 catch{
                     return res.error('ocorreu um erro ao popular o banco')
-                }
-                
-                
-                
-            })
-            
+                }  
+            })   
     },
 
     async getSpells(req,res){

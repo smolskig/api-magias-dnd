@@ -1,6 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 
-const URI = 'mongodb+srv://admin:smolski@2020@cluster0.oomh2.mongodb.net/dndSpellsApi?retryWrites=true&w=majority'
+const URI = process.env.MONGO_URL
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
