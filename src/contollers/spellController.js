@@ -16,7 +16,7 @@ module.exports = {
                         "alcance":`${alcance.toFixed(1)} Metros`,
                         "componentes":info.material_component,
                         "duracao":`${info.duration} ${info.duration_unit} `,
-                        "descrição":info.description.replace(regex, ""),
+                        "descricao":info.description.replace(regex, ""),
                         "niveis_superiores":"teste"
                     }
                     result.push(formated)    
@@ -28,7 +28,7 @@ module.exports = {
                             })
                             .catch((err)=>console.log(err))
                     })
-                    return res.send(200)
+                    return res.sendStatus(200)
                 }
                 catch{
                     return res.error('ocorreu um erro ao popular o banco')

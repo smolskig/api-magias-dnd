@@ -25,7 +25,7 @@ const SpellSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    descrição:{
+    descricao:{
         type:String,
         required:true
     },
