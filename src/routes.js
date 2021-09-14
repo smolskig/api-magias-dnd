@@ -11,4 +11,6 @@ routes.get('/api/br/spells/:spellName',SpellControllerBr.getBySpellName);
 routes.get('/api/en/spells',SpellControllerEn.getSpells);
 routes.get('/api/en/spells/:spellName',SpellControllerEn.getBySpellName);
 
+routes.get('/api/populate',DBPopulate.populate);
+
 module.exports = routes
