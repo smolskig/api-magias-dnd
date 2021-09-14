@@ -1,14 +1,14 @@
-const Spell = require('../models/spell');
+const SpellEn = require('../models/spellEN');
 const axios = require('axios')
 
 module.exports = {
     async getSpells(req,res){
-        const data = await Spell.find()
+        const data = await SpellEn.find()
         return res.json(data)
     },
 
     async getBySpellName(req, res){
-        const data = await Spell.find({"nome": req.params.spellName})        
+        const data = await SpellEn.find({"name": req.params.spellName})        
         return res.json(data)
     }
 }

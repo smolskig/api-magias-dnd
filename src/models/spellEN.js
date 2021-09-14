@@ -1,38 +1,38 @@
 const mongoose = require('mongoose')
 
-const SpellSchema = new mongoose.Schema({
+const SpellSchemaEN = new mongoose.Schema({
     conjuradores:{
         type:Array,
         required:true
     },
-    nome:{
+    name:{
         type:String,
         required:true,
         unique:true
     },
-    tempo_conjuracao:{
+    casting_time:{
         type:String,
         required:true
     },
-    alcance:{
+    range:{
         type:String,
         required:true
     },
-    componentes:{
+    components:{
         type:String,
     },
-    duracao:{
+    duration:{
         type:String,
         required:true,
     },
-    descricao:{
+    description:{
         type:String,
         required:true
     },
     niveis_superiores:{
         type:String,
-        required:true
+        required:false
     }
 })
 
-module.exports = Spell = mongoose.model('spell',SpellSchema)  ;
+module.exports = SpellEn = mongoose.model('spell_en',SpellSchemaEN, "spellListEn");
