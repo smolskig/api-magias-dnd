@@ -10,6 +10,11 @@ const SpellSchemaEN = new mongoose.Schema({
         required:true,
         unique:true
     },
+    search_name:{
+        type:String,
+        required:true,
+        unique:true
+    },
     casting_time:{
         type:String,
         required:true

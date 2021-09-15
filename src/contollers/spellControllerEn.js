@@ -9,7 +9,7 @@ module.exports = {
 
     async getBySpellName(req, res) {
         const fixedSpellName = req.params.spellName.replace("-", " ")
-        const data = await SpellEn.find({ "name": fixedSpellName })
+        const data = await SpellEn.find({ "search_name": fixedSpellName })
         return res.json(data)
     }
 }
