@@ -9,6 +9,6 @@ module.exports = {
     async getBySpellName(req, res) {
         const fixedSpellName = req.params.spellName.replace("-", " ")
         const data = await SpellBR.find({ "nome": fixedSpellName })
-        return res.json(data)
+        data.length > 1 ? res.json(data) : res.json(data[0])
     }
 }
